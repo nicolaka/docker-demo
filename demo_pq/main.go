@@ -146,7 +146,7 @@ func main() {
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/db", dbIndex)
 
-	log.Println("listening on :8080")
+	log.Println("listening on tcp port 8080")
 
 	if err := http.ListenAndServe(":8080", mux); err != nil {
 		fmt.Errorf("error serving: %s", err)
